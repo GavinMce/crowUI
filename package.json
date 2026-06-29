@@ -1,5 +1,5 @@
 {
-  "name": "@crow/ui",
+  "name": "@crow-dev/ui",
   "version": "0.1.0",
   "description": "React component library for centralized styling",
   "type": "module",
