@@ -36,7 +36,7 @@ jobs:
       - name: Install knope
         if: steps.check.outputs.needed == 'true'
         run: |
-          curl -sL https://github.com/knope-dev/knope/releases/latest/download/knope-x86_64-unknown-linux-musl.tar.gz \
+          curl -sL https://github.com/knope-dev/knope/releases/latest/download/knope-x86_64-unknown-linux-musl.tgz \
             | tar xz -C /tmp
           sudo mv /tmp/knope /usr/local/bin/knope
 
