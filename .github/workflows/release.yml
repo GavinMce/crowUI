@@ -35,6 +35,12 @@ jobs:
           cache: 'npm'
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Configure git
+        if: steps.check.outputs.needed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - uses: knope-dev/action@v2.1.2
         if: steps.check.outputs.needed == 'true'
         with:
