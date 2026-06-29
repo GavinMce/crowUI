@@ -37,4 +37,5 @@ type = "Command"
 command = "npm publish --access public"
 
 [[workflows.steps]]
-type = "Release"
+type = "Command"
+command = "bash scripts/create-github-release.sh"
