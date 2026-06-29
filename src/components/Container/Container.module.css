@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--crow-spacing-4);
+  padding-right: var(--crow-spacing-4);
+}
+
+.sm  { max-width: var(--crow-container-sm); }
+.md  { max-width: var(--crow-container-md); }
+.lg  { max-width: var(--crow-container-lg); }
+.xl  { max-width: var(--crow-container-xl); }
+.full { max-width: 100%; }
