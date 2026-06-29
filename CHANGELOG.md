@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 
 This file is automatically updated by [knope](https://knope.tech) during releases.
+## 0.1.4 (2026-06-29)
+
+### Features
+
+- add layout and cloud UI components (#15)
+
 ## 0.1.3 (2026-06-29)
 
 ### Features
