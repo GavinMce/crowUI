@@ -1,7 +1,8 @@
 name: Release
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [main]
 
 permissions:
   contents: write
@@ -14,26 +15,33 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Check if release tag exists
+        id: check
+        run: |
+          git fetch --tags
+          VERSION=$(node -p "require('./package.json').version")
+          if git tag -l "v${VERSION}" | grep -q .; then
+            echo "needed=false" >> $GITHUB_OUTPUT
+          else
+            echo "needed=true" >> $GITHUB_OUTPUT
+          fi
+
       - uses: actions/setup-node@v4
+        if: steps.check.outputs.needed == 'true'
         with:
           node-version: '20'
           cache: 'npm'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Configure git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
       - name: Install knope
+        if: steps.check.outputs.needed == 'true'
         run: |
           curl -sL https://github.com/knope-dev/knope/releases/latest/download/knope-x86_64-unknown-linux-musl.tar.gz \
             | tar xz -C /tmp
           sudo mv /tmp/knope /usr/local/bin/knope
 
-      - run: npm ci
-
       - name: Release
+        if: steps.check.outputs.needed == 'true'
         run: knope release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

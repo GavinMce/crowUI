@@ -7,15 +7,26 @@ changelog = "CHANGELOG.md"
 #   fix:              → patch bump
 #   feat!: / BREAKING → major bump
 
+# Step 1: Run manually via GitHub Actions "Prepare Release" workflow.
+# Bumps the version, updates the changelog, and opens a release PR.
 [[workflows]]
-name = "release"
+name = "prepare-release"
 
 [[workflows.steps]]
 type = "PrepareRelease"
 
 [[workflows.steps]]
 type = "Command"
-command = "git add package.json CHANGELOG.md && git commit -m 'chore: prepare release'"
+command = "bash scripts/create-release-pr.sh"
+
+# Step 2: Triggered automatically when the release PR merges to main.
+# Builds, publishes to npm, and creates the GitHub release.
+[[workflows]]
+name = "release"
+
+[[workflows.steps]]
+type = "Command"
+command = "npm ci"
 
 [[workflows.steps]]
 type = "Command"
@@ -24,9 +35,6 @@ command = "npm run build"
 [[workflows.steps]]
 type = "Command"
 command = "npm publish --access public"
-
-[[workflows.steps]]
-type = "Push"
 
 [[workflows.steps]]
 type = "Release"
