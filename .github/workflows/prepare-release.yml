@@ -28,7 +28,7 @@ jobs:
       - name: Install knope
         run: |
           curl -sL https://github.com/knope-dev/knope/releases/latest/download/knope-x86_64-unknown-linux-musl.tgz \
-            | tar xz -C /tmp
+            | tar xz -C /tmp --strip-components=1
           sudo mv /tmp/knope /usr/local/bin/knope
 
       - name: Prepare release PR
