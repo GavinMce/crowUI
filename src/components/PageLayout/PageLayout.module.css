@@ -1,0 +1,32 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--crow-z-raised);
+  flex-shrink: 0;
+}
+
+.body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  position: sticky;
+  top: var(--crow-navbar-height);
+  height: calc(100vh - var(--crow-navbar-height));
+  flex-shrink: 0;
+}
+
+.main {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--crow-spacing-6);
+  background-color: var(--crow-color-surface);
+}

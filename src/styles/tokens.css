@@ -55,6 +55,22 @@
   --crow-spacing-6: 1.5rem;
   --crow-spacing-8: 2rem;
 
+  /* Spacing — extended */
+  --crow-spacing-10: 2.5rem;
+  --crow-spacing-12: 3rem;
+  --crow-spacing-16: 4rem;
+
+  /* Layout */
+  --crow-navbar-height: 64px;
+  --crow-sidebar-width: 240px;
+  --crow-sidebar-width-collapsed: 64px;
+
+  /* Container max-widths */
+  --crow-container-sm: 640px;
+  --crow-container-md: 768px;
+  --crow-container-lg: 1024px;
+  --crow-container-xl: 1280px;
+
   /* Border radius */
   --crow-radius-sm: 4px;
   --crow-radius-md: 8px;

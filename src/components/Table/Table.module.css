@@ -1,0 +1,72 @@
+.wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--crow-color-border);
+  border-radius: var(--crow-radius-md);
+  background-color: var(--crow-color-background);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--crow-font-family);
+  font-size: var(--crow-font-size-sm);
+}
+
+.th {
+  padding: var(--crow-spacing-3) var(--crow-spacing-4);
+  text-align: left;
+  font-weight: var(--crow-font-weight-medium);
+  color: var(--crow-color-text-muted);
+  border-bottom: 1px solid var(--crow-color-border);
+  background-color: var(--crow-color-surface);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.sortable {
+  cursor: pointer;
+}
+
+.sortable:hover {
+  color: var(--crow-color-text);
+}
+
+.thContent {
+  display: flex;
+  align-items: center;
+  gap: var(--crow-spacing-1);
+}
+
+.sortIcon {
+  color: var(--crow-color-text-disabled);
+}
+
+.tr {
+  border-bottom: 1px solid var(--crow-color-border);
+  transition: background-color var(--crow-transition-fast);
+}
+
+.tr:last-child {
+  border-bottom: none;
+}
+
+.tr:hover {
+  background-color: var(--crow-color-surface);
+}
+
+.selectedRow {
+  background-color: var(--crow-color-info-bg);
+}
+
+.td {
+  padding: var(--crow-spacing-3) var(--crow-spacing-4);
+  color: var(--crow-color-text);
+  vertical-align: middle;
+}
+
+.empty {
+  text-align: center;
+  color: var(--crow-color-text-muted);
+  padding: var(--crow-spacing-8);
+}

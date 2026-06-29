@@ -1,0 +1,109 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: var(--crow-sidebar-width);
+  height: 100%;
+  background-color: var(--crow-color-primary);
+  color: var(--crow-color-primary-text);
+  font-family: var(--crow-font-family);
+  transition: width var(--crow-transition-base);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.collapsed {
+  width: var(--crow-sidebar-width-collapsed);
+}
+
+.header {
+  padding: var(--crow-spacing-4) var(--crow-spacing-4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: var(--crow-font-weight-bold);
+  font-size: var(--crow-font-size-lg);
+}
+
+.nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--crow-spacing-2) 0;
+}
+
+.group {
+  padding: var(--crow-spacing-2) 0;
+}
+
+.group + .group {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.groupLabel {
+  display: block;
+  font-size: var(--crow-font-size-xs);
+  font-weight: var(--crow-font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.4);
+  padding: var(--crow-spacing-2) var(--crow-spacing-4) var(--crow-spacing-1);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: var(--crow-spacing-3);
+  width: 100%;
+  padding: var(--crow-spacing-2) var(--crow-spacing-4);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: var(--crow-font-size-sm);
+  font-weight: var(--crow-font-weight-medium);
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 0;
+  transition: background-color var(--crow-transition-fast), color var(--crow-transition-fast);
+  white-space: nowrap;
+}
+
+.item:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+.activeItem {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.itemIcon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.itemLabel {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.collapseBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--crow-spacing-3);
+  background: none;
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  font-size: var(--crow-font-size-md);
+  transition: color var(--crow-transition-fast);
+}
+
+.collapseBtn:hover {
+  color: #ffffff;
+}
