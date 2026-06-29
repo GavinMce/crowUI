@@ -1,0 +1,53 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--crow-font-family);
+  font-weight: var(--crow-font-weight-medium);
+  border-radius: var(--crow-radius-full);
+  white-space: nowrap;
+}
+
+/* Sizes */
+
+.sm {
+  font-size: var(--crow-font-size-xs);
+  padding: 2px var(--crow-spacing-2);
+}
+
+.md {
+  font-size: var(--crow-font-size-sm);
+  padding: var(--crow-spacing-1) var(--crow-spacing-3);
+}
+
+/* Variants */
+
+.default {
+  background-color: var(--crow-color-surface);
+  color: var(--crow-color-text-muted);
+  border: 1px solid var(--crow-color-border);
+}
+
+.primary {
+  background-color: var(--crow-color-primary);
+  color: var(--crow-color-primary-text);
+}
+
+.success {
+  background-color: var(--crow-color-success-bg);
+  color: var(--crow-color-success-text);
+}
+
+.warning {
+  background-color: var(--crow-color-warning-bg);
+  color: var(--crow-color-warning-text);
+}
+
+.danger {
+  background-color: var(--crow-color-danger-bg);
+  color: var(--crow-color-danger-text);
+}
+
+.info {
+  background-color: var(--crow-color-info-bg);
+  color: var(--crow-color-info-text);
+}

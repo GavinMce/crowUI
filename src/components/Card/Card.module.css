@@ -1,0 +1,27 @@
+.card {
+  background-color: var(--crow-color-background);
+  border: 1px solid var(--crow-color-border);
+  border-radius: var(--crow-radius-lg);
+  box-shadow: var(--crow-shadow-sm);
+  overflow: hidden;
+  font-family: var(--crow-font-family);
+}
+
+.header {
+  padding: var(--crow-spacing-4) var(--crow-spacing-6);
+  border-bottom: 1px solid var(--crow-color-border);
+  font-weight: var(--crow-font-weight-medium);
+  color: var(--crow-color-text);
+}
+
+.body {
+  padding: var(--crow-spacing-6);
+  color: var(--crow-color-text);
+}
+
+.footer {
+  padding: var(--crow-spacing-4) var(--crow-spacing-6);
+  border-top: 1px solid var(--crow-color-border);
+  background-color: var(--crow-color-surface);
+  color: var(--crow-color-text-muted);
+}
