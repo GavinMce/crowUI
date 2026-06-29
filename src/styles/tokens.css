@@ -9,6 +9,23 @@
   --crow-color-accent-hover: #c73652;
   --crow-color-accent-text: #ffffff;
 
+  /* Colors — status */
+  --crow-color-success: #16a34a;
+  --crow-color-success-bg: #dcfce7;
+  --crow-color-success-text: #14532d;
+
+  --crow-color-warning: #d97706;
+  --crow-color-warning-bg: #fef3c7;
+  --crow-color-warning-text: #78350f;
+
+  --crow-color-danger: #dc2626;
+  --crow-color-danger-bg: #fee2e2;
+  --crow-color-danger-text: #7f1d1d;
+
+  --crow-color-info: #2563eb;
+  --crow-color-info-bg: #dbeafe;
+  --crow-color-info-text: #1e3a8a;
+
   /* Colors — neutral */
   --crow-color-background: #ffffff;
   --crow-color-surface: #f8f8f8;
