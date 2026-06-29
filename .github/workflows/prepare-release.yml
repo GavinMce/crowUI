@@ -25,11 +25,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Install knope
-        run: |
-          curl -sL https://github.com/knope-dev/knope/releases/latest/download/knope-x86_64-unknown-linux-musl.tgz \
-            | tar xz -C /tmp
-          sudo mv /tmp/knope /usr/local/bin/knope
+      - uses: knope-dev/action@v2.1.2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Prepare release PR
         run: knope prepare-release
