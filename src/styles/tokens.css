@@ -1,0 +1,62 @@
+:root {
+  /* Colors — primary */
+  --crow-color-primary: #1a1a2e;
+  --crow-color-primary-hover: #16213e;
+  --crow-color-primary-text: #ffffff;
+
+  /* Colors — accent */
+  --crow-color-accent: #e94560;
+  --crow-color-accent-hover: #c73652;
+  --crow-color-accent-text: #ffffff;
+
+  /* Colors — neutral */
+  --crow-color-background: #ffffff;
+  --crow-color-surface: #f8f8f8;
+  --crow-color-border: #e0e0e0;
+  --crow-color-text: #1a1a1a;
+  --crow-color-text-muted: #6b6b6b;
+  --crow-color-text-disabled: #aaaaaa;
+
+  /* Typography */
+  --crow-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --crow-font-size-xs: 0.75rem;
+  --crow-font-size-sm: 0.875rem;
+  --crow-font-size-md: 1rem;
+  --crow-font-size-lg: 1.125rem;
+  --crow-font-size-xl: 1.25rem;
+  --crow-font-weight-normal: 400;
+  --crow-font-weight-medium: 500;
+  --crow-font-weight-bold: 700;
+  --crow-line-height-tight: 1.25;
+  --crow-line-height-base: 1.5;
+
+  /* Spacing */
+  --crow-spacing-1: 0.25rem;
+  --crow-spacing-2: 0.5rem;
+  --crow-spacing-3: 0.75rem;
+  --crow-spacing-4: 1rem;
+  --crow-spacing-6: 1.5rem;
+  --crow-spacing-8: 2rem;
+
+  /* Border radius */
+  --crow-radius-sm: 4px;
+  --crow-radius-md: 8px;
+  --crow-radius-lg: 12px;
+  --crow-radius-full: 9999px;
+
+  /* Shadows */
+  --crow-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --crow-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.05);
+  --crow-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+
+  /* Transitions */
+  --crow-transition-fast: 150ms ease;
+  --crow-transition-base: 250ms ease;
+
+  /* Z-index */
+  --crow-z-base: 0;
+  --crow-z-raised: 10;
+  --crow-z-overlay: 100;
+  --crow-z-modal: 200;
+  --crow-z-toast: 300;
+}

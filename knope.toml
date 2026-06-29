@@ -1,0 +1,32 @@
+[package]
+versioned_files = ["package.json"]
+changelog = "CHANGELOG.md"
+
+# Uses conventional commits to determine version bumps:
+#   feat:             → minor bump
+#   fix:              → patch bump
+#   feat!: / BREAKING → major bump
+
+[[workflows]]
+name = "release"
+
+[[workflows.steps]]
+type = "PrepareRelease"
+
+[[workflows.steps]]
+type = "Command"
+command = "git add package.json CHANGELOG.md && git commit -m 'chore: prepare release'"
+
+[[workflows.steps]]
+type = "Command"
+command = "npm run build"
+
+[[workflows.steps]]
+type = "Command"
+command = "npm publish --access public"
+
+[[workflows.steps]]
+type = "Push"
+
+[[workflows.steps]]
+type = "Release"
